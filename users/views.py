@@ -83,7 +83,7 @@ class CustomTokenRefreshView(TokenRefreshView):
             response.set_cookie(
                 'access',
                 access_token,
-                max_age=settings.AUTH_COOKIE_MAX_AGE,
+                max_age=settings.AUTH_COOKIE_MAX_REFRESH_AGE,
                 path=settings.AUTH_COOKIE_PATH,
                 secure=settings.AUTH_COOKIE_SECURE,
                 httponly=settings.AUTH_COOKIE_HTTP_ONLY,

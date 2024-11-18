@@ -14,6 +14,7 @@ This repository demonstrates how to implement a custom JWT authentication flow i
 - `CustomTokenObtainPairView`: Handles user login and generates JWT tokens, setting them in cookies.
 - `CustomTokenRefreshView`: Refreshes the JWT `access` token using the refresh token stored in cookies.
 - `CustomTokenVerifyView`: Verifies the JWT `access` token from cookies to ensure the user's authentication.
+- `CustomProviderAuthView`: Handles social logins and generates JWT tokens. setting them in cookies
 - **Secure Cookie Settings**: Configurable settings for cookies, including SameSite, HTTP-only, and Secure attributes.
 
 ## Installation:

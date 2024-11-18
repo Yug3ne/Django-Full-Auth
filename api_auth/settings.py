@@ -169,11 +169,16 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_EXTRA_DATA = ['first_name', 'last_name']
 
 SOCIAL_AUTH_GITHUB_KEY = getenv('GITHUB_AUTH_KEY')
 SOCIAL_AUTH_GITHUB_SECRET = getenv('GITHUB_AUTH_SECRET_KEY')
+SOCIAL_AUTH_GITHUB_SCOPE = ['user:email']
+SOCIAL_AUTH_GITHUB_EXTRA_DATA = [
+    ('name', 'name'), 
+    ('email', 'email')  
+]
 
 
 AUTH_COOKIE = 'access'
-AUTH_COOKIE_MAX_AGE = 60 * 60 * 5
-AUTH_COOKIE_REFRESH_MAX_AGE = 60 * 60 * 24
+AUTH_COOKIE_MAX_AGE = 60 * 60 * 1 # one hour life time
+AUTH_COOKIE_MAX_REFRESH_AGE = 60 * 60 * 24 # 24 hours lifetime
 AUTH_COOKIE_SECURE = getenv('AUTH_COOKIE_SECURE', 'True') == 'True'
 AUTH_COOKIE_HTTP_ONLY = True
 AUTH_COOKIE_PATH = '/'
